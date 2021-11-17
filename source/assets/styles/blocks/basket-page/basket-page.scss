@@ -148,9 +148,9 @@
 
    &__select {
       border: 1px solid #e5e5e5;
-      max-width: 215px;
+      width: 215px;
       @include breakpoint($md-3, 0) {
-         max-width: 215px;
+         width: 215px;
       }
    }
 

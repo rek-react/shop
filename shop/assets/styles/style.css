@@ -190,8 +190,7 @@ h6 {
 }
 
 .select {
-  width: 100%;
-  max-width: 185px;
+  width: 185px;
   z-index: 3;
   position: relative;
 }
@@ -2760,7 +2759,7 @@ h6 {
 
 .form-delivery__select {
   border: 1px solid #e5e5e5;
-  max-width: 215px;
+  width: 215px;
 }
 
 .form-delivery .ckeckbox-delivery {
@@ -4122,7 +4121,7 @@ body._lock {
 
 @media (max-width: 525px) {
   .select {
-    max-width: 140px;
+    width: 140px;
   }
 
   .select-new__current,
@@ -4269,7 +4268,7 @@ body._lock {
   }
 
   .form-delivery__select {
-    max-width: 215px;
+    width: 215px;
   }
 
   .form-delivery .ckeckbox-delivery {
