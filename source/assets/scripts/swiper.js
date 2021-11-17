@@ -76,6 +76,7 @@ if (swiperBrands) {
       allowTouchMove: false,
       slidesPerGroup: 1,
       observer: true,
+      loop: true,
       observeParents: true,
       observeSlideChildren: true,
       navigation: {

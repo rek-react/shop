@@ -2,6 +2,7 @@
 @@include('bg.js');
 @@include('custom-select.js');
 @@include('removeBlock.js');
+@@include('textarea.js');
 @@include('swiper.js');
 @@include('nav.js');
 @@include('nav-side.js');

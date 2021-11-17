@@ -111,9 +111,6 @@
       }
       textarea {
          min-height: 120px;
-         width: 100%;
-         height: 100%;
-         resize: none;
       }
    }
 
@@ -144,13 +141,16 @@
       &:invalid {
          border: 1px solid red;
       }
+      @include breakpoint($md-3, 0) {
+         max-width: none;
+      }
    }
 
    &__select {
       border: 1px solid #e5e5e5;
       width: 215px;
       @include breakpoint($md-3, 0) {
-         width: 215px;
+         width: 100%;
       }
    }
 
