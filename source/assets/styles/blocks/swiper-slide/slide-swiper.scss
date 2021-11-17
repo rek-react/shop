@@ -1,0 +1,99 @@
+.swiper-page {
+   &__row {
+   }
+
+   &__slide {
+      position: relative;
+   }
+}
+
+.slide-swiper {
+   &__body {
+      height: 100%;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         background: url("../images/swiper-slide/bg.png") 0 0 / cover no-repeat;
+         height: 100%;
+      }
+      @include adaptive-marPad(padding, 20, 37, 60, 37, 10, 20, 60, 20, 1);
+   }
+   &__description {
+      max-width: 280px;
+      position: relative;
+      z-index: 1;
+   }
+   &__title {
+      @include adaptive-value(font-size, 48, 27, 1);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #333333;
+      margin-bottom: 50px;
+      span {
+         color: #f68038;
+      }
+   }
+
+   &__text {
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 24px;
+   }
+
+   &__words-1 {
+      color: #f68038;
+      @include adaptive-value(font-size, 18, 14, 1);
+   }
+
+   &__words-2 {
+      padding: 6px 8px;
+      color: $white;
+      background-color: #919191;
+   }
+
+   &__words-3 {
+      color: #979797;
+   }
+
+   &__info {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+   }
+
+   &__price {
+      @include adaptive-value(font-size, 36, 22, 1);
+      color: $white;
+      font-weight: 900;
+      margin-bottom: 25px;
+   }
+
+   &__details {
+      text-transform: uppercase;
+      height: 35px;
+      display: inline-flex;
+      align-items: center;
+      border: 3px solid $white;
+      border-radius: 20px;
+      color: $white;
+      padding: 0 20px;
+      @include adaptive-value(font-size, 14, 12, 1);
+      @include breakpoint($md-3, 0) {
+      }
+   }
+
+   &__bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+   }
+}

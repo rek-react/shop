@@ -1,0 +1,30 @@
+.breadcrambs-page {
+   &__list {
+      display: flex;
+      overflow: auto;
+      height: 17px;
+   }
+
+   &__item {
+      margin-right: 15px;
+      white-space: nowrap;
+   }
+
+   &__link {
+      font-weight: 300;
+      color: $mainColor;
+      text-decoration: underline;
+      &::after {
+         content: "";
+         display: inline-block;
+         width: 10px;
+         height: 10px;
+         margin: 0 0 0 17px;
+         background: url("../images/breadcrambs/arrow.png") 0 0 no-repeat;
+      }
+   }
+
+   &__current {
+      color: #999999;
+   }
+}

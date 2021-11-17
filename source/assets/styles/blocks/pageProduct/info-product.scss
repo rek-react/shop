@@ -1,0 +1,40 @@
+.product-page {
+   &__info {
+      margin: 37px 0 50px;
+   }
+}
+.info-product {
+   &__tabs {
+   }
+
+   &__body {
+      background-color: #fafafa;
+   }
+   &__item {
+      display: none;
+      padding: 40px 30px;
+      &._show {
+         display: block;
+      }
+      @include breakpoint($md-2, 0) {
+         padding: 25px;
+      }
+      @include breakpoint($md-3, 0) {
+         padding: 20px 15px;
+      }
+   }
+   &__text {
+      color: #666666;
+      line-height: 22px;
+      font-weight: 300;
+      p {
+         margin-bottom: 30px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+         @include breakpoint($md-3, 0) {
+            margin-bottom: 15px;
+         }
+      }
+   }
+}

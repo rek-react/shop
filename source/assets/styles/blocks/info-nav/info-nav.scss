@@ -1,0 +1,74 @@
+.info-nav {
+   border-top: 3px dotted #dadada;
+   border-bottom: 3px dotted #dadada;
+
+   &__body {
+      padding: 25px 0;
+      @include breakpoint($md-2, 0) {
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+
+   &__element {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 8px 15px 15px;
+      border-top: 1px solid #efefef;
+      &:first-child {
+         border-top: 0;
+      }
+      @include breakpoint($md-2, 0) {
+         flex: 0 1 50%;
+         display: block;
+         text-align: center;
+         border-top: 0;
+
+         border-left: 1px solid #efefef;
+         &:first-child {
+            border-left: 0;
+         }
+         &:last-child {
+         }
+      }
+   }
+
+   &__label {
+      color: #333333;
+      font-weight: 900;
+      margin-right: 35px;
+      @include breakpoint($md-2, 0) {
+         margin: 0 0 20px 0;
+      }
+   }
+
+   &__list {
+      @include breakpoint($md-2, 1) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__item {
+      margin-right: 25px;
+      &:last-child {
+         margin-right: 0;
+      }
+      @include breakpoint($md-2, 0) {
+         margin: 0 0 20px 0;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   &__link {
+      font-weight: 300;
+      color: $mainColor;
+      @include breakpoint($md-1, 1) {
+         &:hover {
+            color: #333333;
+         }
+      }
+   }
+}

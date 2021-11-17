@@ -1,0 +1,72 @@
+.bell {
+   display: flex;
+   align-items: center;
+   padding-left: 35px;
+   position: relative;
+   z-index: 3;
+   &__item {
+      padding: 0 34px;
+      border-right: 1px solid $white;
+      position: relative;
+      &:last-child {
+         border-right: none;
+      }
+      @include breakpoint(1110, 0) {
+         padding: 0 20px;
+      }
+      @include breakpoint($md-1, 0) {
+         border-right: none;
+         &:first-child {
+            display: none;
+         }
+      }
+      @include breakpoint($md-2, 0) {
+         padding: 0 0 0 10px;
+      }
+   }
+
+   &__label {
+      font-size: 12px;
+      font-weight: 300;
+      color: $white;
+      margin-bottom: 5px;
+      @include breakpoint($md-2, 0) {
+         display: none;
+      }
+   }
+
+   &__telephone {
+      @include adaptive-value(font-size, 18, 15, 1);
+      font-weight: 900;
+      color: $white;
+      &::before {
+         font-weight: 400;
+         position: absolute;
+         left: -5px;
+         bottom: 0;
+         font-size: 30px;
+         @include breakpoint(1110, 0) {
+            left: -20px;
+         }
+      }
+      &_last {
+         &::before {
+            display: none;
+         }
+         @include breakpoint($md-1, 0) {
+            &::before {
+               display: block;
+            }
+         }
+         @include breakpoint($md-2, 0) {
+            font-size: 0;
+            &::before {
+               margin-bottom: -5px;
+               width: 30px;
+               height: 30px;
+               font-size: 40px;
+            }
+         }
+      }
+   }
+}

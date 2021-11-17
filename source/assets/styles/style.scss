@@ -1,0 +1,195 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "reboot";
+@import "wrapper&container";
+@import "swiper";
+@import "bg";
+@import "forms";
+@import "noUiSlider";
+@import "blocks/btn.scss";
+@import "blocks/header/header.scss";
+@import "blocks/header/action.scss";
+@import "blocks/header/bell.scss";
+@import "blocks/header/top-header.scss";
+@import "blocks/header/bottom-header.scss";
+@import "blocks/nav.scss";
+@import "blocks/logo";
+@import "blocks/header/burger.scss";
+@import "blocks/aside/aside.scss";
+@import "blocks/aside/nav-side.scss";
+@import "blocks/aside/nav-side-modal.scss";
+@import "blocks/aside/news-side.scss";
+@import "blocks/aside/reviews-side.scss";
+@import "blocks/aside/filter.scss";
+@import "blocks/product.scss";
+@import "blocks/search/search.scss";
+@import "blocks/search/selected.scss";
+@import "blocks/search/categoryes.scss";
+@import "blocks/swiper-slide/pageSwiper.scss";
+@import "blocks/swiper-slide/slide-swiper.scss";
+@import "blocks/swiper-product.scss";
+@import "blocks/hover-product.scss";
+@import "blocks/arrows.scss";
+@import "blocks/brands/brands.scss";
+@import "blocks/text-page/text.scss";
+@import "blocks/info-nav/info-nav.scss";
+@import "blocks/footer/footer.scss";
+@import "blocks/footer/top-footer.scss";
+@import "blocks/footer/brands-footer.scss";
+@import "blocks/footer/socials-footer.scss";
+@import "blocks/footer/social-blocks-footer.scss";
+@import "blocks/footer/phones-footer.scss";
+@import "blocks/footer/bottom-footer.scss";
+@import "blocks/breadcrambs.scss";
+@import "blocks/pageProduct/product-page.scss";
+@import "blocks/pageProduct/info-product.scss";
+@import "blocks/pageProduct/similar-product.scss";
+@import "blocks/basket-page/basket-page.scss";
+body {
+   font-size: 14px;
+   font-family: "Roboto";
+   &._lock {
+      overflow: hidden;
+   }
+}
+
+.page {
+   margin-top: 150px;
+   @include breakpoint(930, 0) {
+      margin-top: 170px;
+   }
+   @include breakpoint($md-2, 0) {
+      margin-top: 120px;
+   }
+   @include breakpoint($md-3, 0) {
+      margin-top: 80px;
+   }
+   &__container {
+      display: flex;
+   }
+   &__side {
+      flex: 0 0 265px;
+   }
+   &__content {
+      min-width: 0;
+      padding-left: 30px;
+      flex: 1 1 auto;
+
+      @include breakpoint($md-1, 0) {
+         padding-left: 0;
+      }
+   }
+   &__search {
+      @include adaptive-value(margin-bottom, 40, 20, 1);
+   }
+   &__swiper {
+      margin-bottom: 20px;
+   }
+   &__brands {
+      @include adaptive-value(margin-top, 40, 20, 1);
+   }
+   &__text {
+      margin-top: 30px;
+   }
+   &__info-nav {
+      margin-top: 35px;
+   }
+   &__breadcrambs {
+      margin-bottom: 30px;
+   }
+}
+.footer {
+   margin-top: 35px;
+}
+.rub {
+   &::after {
+      content: "₽";
+   }
+}
+.arrow-bottom {
+   &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      transition: transform 0.3s ease 0s;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid #dadada;
+      margin-left: 11px;
+   }
+}
+
+.quantity {
+   display: flex;
+   align-items: center;
+   height: 33px;
+   &__arrow {
+      &::before {
+         font-size: 20px;
+         color: #e5e5e5;
+      }
+   }
+   &__input {
+      display: inline-flex;
+      width: 55px;
+      align-items: center;
+      text-align: center;
+      color: #999999;
+      font-size: 16px;
+      padding: 0 5px;
+      font-weight: 900;
+      margin: 0 12px;
+      height: 100%;
+      border: 1px solid #e5e5e5;
+   }
+}
+.tabs {
+   display: flex;
+   &__tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      padding: 0 30px;
+      color: $mainColor;
+      cursor: pointer;
+      height: 50px;
+      transition: all 0.2s linear;
+      position: relative;
+      &._active {
+         color: $white;
+         background-color: $mainColor;
+         span::after {
+            border-bottom: none;
+         }
+      }
+      span {
+         position: relative;
+         &::after {
+            content: "";
+            transition: all 0.2s linear;
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding-top: 2px;
+            width: 100%;
+            border-bottom: 2px dotted;
+         }
+      }
+   }
+}
+.title {
+   text-transform: uppercase;
+   font-family: "UniSans";
+   color: #dadada;
+   @include adaptive-value(font-size, 30, 22, 1);
+   span {
+      display: block;
+      color: #333333;
+      @include adaptive-value(font-size, 36, 24, 1);
+   }
+}
