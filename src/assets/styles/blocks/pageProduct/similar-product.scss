@@ -1,0 +1,41 @@
+.product-page {
+   &__similar {
+      margin-bottom: 20px;
+   }
+}
+.similar-product {
+   &__title {
+      color: #dadada;
+      font-weight: 900;
+      font-family: "UniSans";
+      margin-bottom: 20px;
+      font-size: 36px;
+   }
+
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+   }
+
+   &__col {
+      flex: 0 1 33.333%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      @include breakpoint(1110, 0) {
+         flex: 0 1 50%;
+      }
+      @include breakpoint($md-1, 0) {
+         flex: 0 1 33.333%;
+      }
+      @include breakpoint($md-2, 0) {
+         flex: 0 1 50%;
+      }
+      @include breakpoint($md-3, 0) {
+         flex: 0 1 100%;
+      }
+   }
+
+   &__item {
+   }
+}

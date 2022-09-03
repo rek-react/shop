@@ -1,0 +1,30 @@
+.categoryes {
+   &__item {
+      margin-bottom: 27px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+      @include breakpoint($md-2, 0) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__checkbox {
+      input {
+         display: none;
+         &:checked ~ .categoryes__category {
+            color: #f68038;
+         }
+      }
+   }
+
+   &__category {
+      cursor: pointer;
+      color: #999999;
+      font-weight: 300;
+      font-size: 12px;
+      @include breakpoint($md-2, 0) {
+         font-size: 14px;
+      }
+   }
+}

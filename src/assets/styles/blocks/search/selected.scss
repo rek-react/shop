@@ -1,0 +1,48 @@
+.selected {
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.2s linear;
+   background-color: $white;
+   overflow: auto;
+   &._show {
+      visibility: visible;
+      opacity: 1;
+   }
+   &__body {
+      display: flex;
+      border-left: 1px solid #f3f3f3;
+      border-right: 1px solid #f3f3f3;
+      border-bottom: 4px solid #f68038;
+      @include breakpoint($md-1, 0) {
+         display: block;
+      }
+      @include breakpoint($md-2, 0) {
+         padding: 20px 0;
+      }
+   }
+
+   &__col {
+      padding: 25px 10px 25px 40px;
+      flex: 0 1 33.333%;
+      border-right: 1px solid #dddddd;
+      &:last-child {
+         border-right: none;
+         .selected__list {
+            margin-bottom: 0;
+         }
+      }
+      @include breakpoint($md-1, 0) {
+         padding: 25px 20px;
+         border-right: none;
+      }
+      @include breakpoint($md-2, 0) {
+         padding: 0px 20px;
+      }
+   }
+
+   &__list {
+      @include breakpoint($md-2, 0) {
+         margin-bottom: 20px;
+      }
+   }
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Покупка"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+         <div class="page__container container">
+            <aside class="page__side side" data-da=".page__content, 991, first">
+               @@include('html/nav-side.html',{})
+               @@include('html/side-content.html',{})
+            </aside>
+            <div class="page__content">
+               <form action="#" class="page__search search">
+                  <div class="search__select">
+                     <div class="search__title icon-search">
+                        <span>Везде</span>
+                        <span class="search__quantity" data-quantity="Выбрано: "></span>
+                     </div>
+                     <div class="search__selected selected">
+                        <div class="selected__body">
+                           <div class="selected__col">
+                              <ul class="selected__list categoryes">
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="01">
+                                       <span class="categoryes__category">
+                                          Беговые дорожки
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="02">
+                                       <span class="categoryes__category">
+                                          Эллиптические тренажеры
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="03">
+                                       <span class="categoryes__category">
+                                          Велотренажеры
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="04">
+                                       <span class="categoryes__category">
+                                          Гребные тренажеры
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="05">
+                                       <span class="categoryes__category">
+                                          Вибромассажеры
+                                       </span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="selected__col">
+                              <ul class="selected__list categoryes">
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="06">
+                                       <span class="categoryes__category">
+                                          Теннисные столы
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="07">
+                                       <span class="categoryes__category">
+                                          Баскетбольные щиты и стойки
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="08">
+                                       <span class="categoryes__category">
+                                          Массажные кресла
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="09">
+                                       <span class="categoryes__category">
+                                          Массажные столы
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="10">
+                                       <span class="categoryes__category">
+                                          Силовые тренажеры
+                                       </span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="selected__col">
+                              <ul class="selected__list categoryes">
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="11">
+                                       <span class="categoryes__category">
+                                          Батуты
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="12">
+                                       <span class="categoryes__category">
+                                          Детские городки
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="13">
+                                       <span class="categoryes__category">
+                                          Дачная мебель
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="14">
+                                       <span class="categoryes__category">
+                                          Уличные спортивные комплексы
+                                       </span>
+                                    </label>
+                                 </li>
+                                 <li class="categoryes__item">
+                                    <label class="categoryes__checkbox">
+                                       <input type="checkbox" value="15">
+                                       <span class="categoryes__category">
+                                          Аксессуары
+                                       </span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <input type="text" class="search__input" name="search">
+                  <button class="search__btn btn" type="submit">Найти</button>
+               </form>
+               @@include('html/breadcrambs.html', {
+               "pageCurrent": "Покупка товара"
+               })
+               <form action="#" id="form" class="page__basket basket-page">
+                  <div class="basket-page__registration registration-basket">
+                     <div class="registration-basket__title title">
+                        Оформление заказа
+                     </div>
+                     <div class="registration-basket__body">
+                        <div class="registration-basket__registration">
+                           <div class="registration-basket__tabs tabs">
+                              <button type="button" class="tabs__tab _active"><span>Доставка в регионы</span></button>
+                           </div>
+                        </div>
+                        <div class="registration-basket__content">
+                           <div class="registration-basket__items items-delivery" data-tabitem>
+                              <div class="items-delivery__body">
+                                 <div class="items-delivery__col">
+                                    <div class="items-delivery__form form-delivery">
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Фамилия: <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="text" class="form-delivery__input" id="req" name="surname">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Имя: <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="text" class="form-delivery__input" id="req" name="name">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Отчество: <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="text" class="form-delivery__input" id="req" name="patronymic">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Моб. телефон: <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="tel" class="form-delivery__input" id="req" name="tel">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Ваш E-mail: <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="email" class="form-delivery__input" id="req" name="email">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Способ оплаты: </div>
+                                          <div class="form-delivery__select select">
+                                             <select name="payment" id="select">
+                                                <option value="savings bank" class="arrow-bottom">Через Сбербанк
+                                                </option>
+                                                <option value="QIWI" class="arrow-bottom">Через QIWI</option>
+                                                <option value="Webmoney" class="arrow-bottom">Через Webmoney</option>
+                                                <option value="Paypal" class="arrow-bottom">Через Paypal</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Индекс <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="text" class="form-delivery__input" id="req" name="index">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Город <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="text" class="form-delivery__input" id="req" name="city">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label">Адрес доставки: <span
+                                                class="items-delivery__necessarily">*</span></div>
+                                          <div class="form-delivery__error">
+                                             <input type="text" class="form-delivery__input" id="req" name="address">
+                                          </div>
+                                       </div>
+                                       <div class="form-delivery__group">
+                                          <div class="form-delivery__label form-delivery__label_comment">Комментарии:
+                                          </div>
+                                          <textarea class="form-delivery__input" name="comment"></textarea>
+                                       </div>
+                                       <label class="form-delivery__ckeckbox ckeckbox-delivery">
+                                          <input type="checkbox" name="news&sale">
+                                          <span class="ckeckbox-delivery__label">Подписаться на новости и скидки</span>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="items-delivery__col">
+                                    <div class="items-delivery__text">
+                                       <p>
+                                          <span class="items-delivery__necessarily">*</span> Поля, обязательные для
+                                          заполнения
+                                       </p>
+                                       <p>
+                                          Отправка товара производится только после 100% оплаты
+                                          товара. Стоимость доставки возможно оплатить при
+                                          получении заказа.
+                                       </p>
+                                       <p>
+                                          Доставка в регионы осуществляется EMS Почтой России
+                                          (в течение 5-14 дней) и курьерской службой DPD (в течение
+                                          3-5 дней) с момента передачи заказа в службу доставки.
+                                          Стоимость зависит от веса заказа и расстояния. В некоторые
+                                          регионы доставка возможна только посредством EMS Почты
+                                          России, способ доставки уточняйте у оператора при
+                                          оформлении заказа*.
+                                       </p>
+                                       <p>
+                                          * Интернет-магазин не несет ответственности за задержку
+                                          доставки заказа, связанную с работой курьерских служб DPD
+                                          и EMS Почты России.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="basket-page__arrange  arrange-basket">
+                     <div class="arrange-basket__title title">
+                        Ваш заказ
+                     </div>
+                     <div class="arrange-basket__body">
+                        <div class="arrange-basket__row" id="arrange-basket__row-1">
+                           <div class="arrange-basket__items">
+                              <div class="arrange-basket__close" data-close="#arrange-basket__row-1"></div>
+                              <div class="arrange-basket__image">
+                                 <img src="assets/images/arrange-basket/01.jpg" alt="">
+                              </div>
+                              <div class="arrange-basket__info">
+                                 <a href="#" class="arrange-basket__description"><span>BH Fitness F1 G6414V</span>
+                                    Беговая
+                                    дорожка</a>
+                                 <div class="arrange-basket__prices prices">
+                                    <div class="prices__price rub">
+                                       64 990
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="arrange-basket__quantity quantity" id="quantity">
+                                 <div class="quantity__arrow arrow arrow-prev icon-arrow" data-quantity="arrow-prev">
+                                 </div>
+                                 <input type="text" class="quantity__input" data-min="1" data-max="20" maxlength="2"
+                                    value="1">
+                                 <div class="quantity__arrow arrow arrow-next icon-arrow" data-quantity="arrow-next">
+                                 </div>
+                              </div>
+                              <div class="arrange-basket__prices prices">
+                                 <div class="prices__total">Всего: </div>
+                                 <div class="prices__price rub">
+                                    <span data-subtotal="64 990">64 990</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="arrange-basket__row" id="arrange-basket__row-2">
+                           <div class="arrange-basket__items">
+                              <div class="arrange-basket__close" data-close="#arrange-basket__row-2"></div>
+                              <div class="arrange-basket__image">
+                                 <img src="assets/images/arrange-basket/01.jpg" alt="">
+                              </div>
+                              <div class="arrange-basket__info">
+                                 <a href="#" class="arrange-basket__description"><span>BH Fitness F1 BH Fitness F1
+                                       G6414V</span>
+                                    Беговая
+                                    дорожка</a>
+                                 <div class="arrange-basket__prices prices">
+                                    <div class="prices__price rub">
+                                       64 990
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="arrange-basket__quantity quantity" id="quantity">
+                                 <div class="quantity__arrow arrow arrow-prev icon-arrow" data-quantity="arrow-prev">
+                                 </div>
+                                 <input type="text" class="quantity__input" data-min="1" data-max="20" maxlength="2"
+                                    value="1">
+                                 <div class="quantity__arrow arrow arrow-next icon-arrow" data-quantity="arrow-next">
+                                 </div>
+                              </div>
+                              <div class="arrange-basket__prices prices">
+                                 <div class="prices__total">Всего: </div>
+                                 <div class="prices__price rub">
+                                    <span data-subtotal="64 990">64 990</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrange-basket__footer">
+                        <div class="arrange-basket__total rub">
+                           Итого: <span data-total="129 980">129 980</span>
+                        </div>
+                        <button type="submit" class="arrange-basket__btn btn btn-br20">Оформить заказ</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         @@include('html/info-nav.html',{})
+      </main>
+      @@include('html/footer.html', {})
+   </div>
+   @@include('html/js.html')
+</body>
+
+</html>

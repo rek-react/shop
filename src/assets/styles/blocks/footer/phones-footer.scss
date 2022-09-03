@@ -1,0 +1,25 @@
+.phones-footer {
+   margin-top: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 5px 0 8px;
+   &::before {
+      font-size: 30px;
+      margin-right: 15px;
+      @include breakpoint($md-3, 0) {
+         display: none;
+      }
+   }
+   &__item {
+      margin-bottom: 10px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &__phone {
+      font-weight: 900;
+      @include adaptive-value(font-size, 14, 18, 1);
+      color: #333333;
+   }
+}

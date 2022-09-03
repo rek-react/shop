@@ -1,0 +1,23 @@
+.arrow {
+   cursor: pointer;
+   height: 28px;
+   font-size: 30px;
+   font-weight: 900;
+   &::before {
+      color: $mainColor;
+      transition: all 0.2s linear;
+   }
+   @include breakpoint($md-1, 1) {
+      &:hover {
+         &::before {
+            color: #fd8424;
+         }
+      }
+   }
+   &-prev {
+      transform: rotate(90deg);
+   }
+   &-next {
+      transform: rotate(-90deg);
+   }
+}
