@@ -25,7 +25,7 @@ class NoUiSlider {
                'max': 200000
             }
          })
-         document.addEventListener('change', function (event) {
+         const handleChangePriceForm = (event) => {
             if (event.target.closest('#price-from')) {
                let inputValue = event.target.closest('#price-from').value
                this.rangeFilter.noUiSlider.set([inputValue, null]);
@@ -34,7 +34,8 @@ class NoUiSlider {
                let inputValue = event.target.closest('#price-to').value
                this.rangeFilter.noUiSlider.set([null, inputValue]);
             }
-         })
+         }
+         document.addEventListener('change', handleChangePriceForm.bind(this))
       }
    }
 

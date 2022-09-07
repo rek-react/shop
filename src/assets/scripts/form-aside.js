@@ -17,6 +17,9 @@ class FormAside {
             this.productReset.addEventListener('click', () => {
                productClean.remove()
             })
+            productCleanButton.addEventListener('click', () => {
+               productClean.remove()
+            })
             this.filterReset.addEventListener('click', () => {
                nouislider.rangeFilter.noUiSlider.set([0, 100000]);
                productClean.remove()

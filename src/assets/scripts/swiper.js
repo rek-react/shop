@@ -62,7 +62,10 @@ class SwiperUser {
          modules: [Navigation, Pagination],
          autoHeight: true,
          pagination: {
-            el: '.pagination-products__pagination',
+            el: [
+               document.querySelector('.pagination-products__pagination-top'),
+               document.querySelector('.pagination-products__pagination-bottom')
+            ],
             type: 'bullets',
             clickable: true,
             renderBullet: function (index, className) {
@@ -70,6 +73,7 @@ class SwiperUser {
             },
 
          },
+
          navigation: {
             prevEl: '.pagination-products__arrow_prev',
             nextEl: '.pagination-products__arrow_next'

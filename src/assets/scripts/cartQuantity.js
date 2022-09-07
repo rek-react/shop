@@ -54,6 +54,17 @@ class Quantityes {
    }
    sumSubTotal(subTotal, textSubTotal, quantityeInputValue) {
       subTotal.textContent = parseInt(textSubTotal) * parseInt(quantityeInputValue)
+      this.total()
+   }
+   total() {
+      const total = document.querySelector('[data-total]')
+      const subTotals = document.querySelectorAll('[data-subtotal]')
+      let valueSubtotals = 0
+      subTotals.forEach(item => {
+         const praceNumber = Number(item.textContent.split('\n')[0].replace(/\s/g, ''))
+         valueSubtotals += praceNumber
+      });
+      total.textContent = valueSubtotals
    }
 }
 export default new Quantityes()
